@@ -1,0 +1,5 @@
+.env
+# Dependence directory
+node_modules
+#local netlify folder
+.netlify
