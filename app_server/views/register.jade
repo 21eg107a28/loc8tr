@@ -1,31 +1,32 @@
-extends layout
-
 block content
+html(style='background-color: #a68ee3;')
   .container
     .row
-      .col-md-6.col-md-offset-3
-        h2 Register
-        p.lead Please fill in the registration form below:
-
-        form.form-horizontal(role='form', action='/register', method='post')
-          .form-group
-            label.col-sm-3.control-label(for='username') Username
-            .col-sm-9
-              input.form-control(type='text', id='username', name='username', placeholder='Enter a username', required)
-          .form-group
-            label.col-sm-3.control-label(for='password') Password
-            .col-sm-9
-              input.form-control(type='password', id='password', name='password', placeholder='Enter a password', required)
-          .form-group
-            label.col-sm-3.control-label(for='email') Email
-            .col-sm-9
-              input.form-control(type='email', id='email', name='email', placeholder='Enter an email address', required)
-          .form-group
-            label.col-sm-3.control-label(for='confirm') Confirm Password
-            .col-sm-9
-              input.form-control(type='password', id='confirm', name='confirm', placeholder='Confirm your password', required)
-          .form-group
-            .col-sm-offset-3.col-sm-9
-              button.btn.btn-primary(type='submit') Submit
-              a.btn.btn-default(href='/') Cancel
-
+      .col-md-8.col-md-offset-2
+        .panel.panel-primary(style='background-color: #a68ee3;')
+          .panel-heading
+            h2.text-center(style='font-size: 40px; color: #fff;') Register
+          .panel-body
+            form.form-horizontal(role='form', action='/register', method='post')
+              .form-group
+                label.col-sm-3.control-label(for='username', style='font-size: 30px; color: #fff;') Username:
+                .col-sm-9
+                  input.form-control.input-lg(type='text', id='username', name='username', placeholder='Enter a username', style='font-size: 30px;', required)
+              .form-group
+                label.col-sm-3.control-label(for='password', style='font-size: 30px; color: #fff;') Password:
+                .col-sm-9
+                  input.form-control.input-lg(type='password', id='password', name='password', placeholder='Enter a password', style='font-size: 30px;', required)
+              .form-group
+                label.col-sm-3.control-label(for='email', style='font-size: 30px; color: #fff;') Email:
+                .col-sm-9
+                  input.form-control.input-lg(type='email', id='email', name='email', placeholder='Enter an email address', style='font-size: 30px;', required)
+              .form-group
+                label.col-sm-3.control-label(for='confirm', style='font-size: 30px; color: #fff;') Confirm Password:
+                .col-sm-9
+                  input.form-control.input-lg(type='password', id='confirm', name='confirm', placeholder='Confirm your password', style='font-size: 30px;', required)
+              .form-group
+                .col-sm-offset-3.col-sm-9
+                  button.btn.btn-primary.btn-lg.btn-block(type='submit', style='font-size: 30px; background-color: #fff;') Register
+              .form-group
+                .col-sm-offset-3.col-sm-9
+                  a.btn.btn-default(href='/', style='font-size: 30px; color: #a68ee3;') Cancel
